@@ -20,7 +20,7 @@ spec:
     spec: |
       predictor:
         imagePullSecrets:
-          - name: docker-registry-secret
+          - name: shri-docker-secret
         minReplicas: 1
         maxReplicas: 1
         containers:
@@ -33,5 +33,5 @@ spec:
               - name: ANTHROPIC_API_KEY
                 valueFrom:
                   secretKeyRef:
-                    name: anthropic-secret
+                    name: shri-anthropic-secret
                     key: ANTHROPIC_API_KEY
